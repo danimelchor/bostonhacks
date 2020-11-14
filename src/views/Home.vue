@@ -16,6 +16,7 @@ $main-green : #88e3c5;
 
 .container {
 	position: relative;
+	padding: 0;
 	width: 60vw;
 
 	img {

@@ -70,6 +70,7 @@ $main-green : #88e3c5;
 	border-radius: 15px;
 	border: 1px solid #111;
 	margin-top: 2vw;
+	width: 60vw;
 
 	.contact-info {
 		padding: 2vw;
