@@ -10,7 +10,7 @@
     <router-view />
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./assets/css/reset.css";
 
 $bg: #222;
