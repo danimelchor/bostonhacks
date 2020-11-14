@@ -8,15 +8,14 @@
             :height="'100%'"
             :controller="true"
             :useDevicePixels="false"
-            :viewState="{latitude: 49.254, longitude: -123.13, zoom: 11, maxZoom: 16, pitch: 45, bearing: 0}"
+            :viewState="{latitude: 49.254, longitude: -123.13, zoom: 1, maxZoom: 16, pitch: 0, bearing: 0}"
             >
-        <Mapbox class="fill-wrapper" 
-                :accessToken="'YOUR MAPBOX TOKEN'"                 
+      <Mapbox class="fill-wrapper" 
+                :accessToken="'pk.eyJ1IjoiZG1lbGNob3IiLCJhIjoiY2toaWJsNnhyMGEzbTJ6c2RmZWRzY3EyMiJ9.55wKLQ9Yze26jToMLOMQ2g'"                 
                 :center="[-123.13, 49.254]"
-                :zoom="11"
+                :zoom="1"
                 :bearing="0"
-                :pitch="45"
-                />
+                :pitch="0"/>
     </DeckGL>
   </div>
 </template>
