@@ -1,12 +1,11 @@
 <template>
   <div class="calculator">
     <h1>Calculator</h1>
-    <Map/>
+    <Map />
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
 
 <script>
 import Map from "@/components/map.vue";

@@ -11,9 +11,9 @@
   </div>
 </template>
 <style lang="scss">
-@import './assets/css/reset.css';
+@import "./assets/css/reset.css";
 
-$bg : #222;
+$bg: #222;
 
 #app {
   p {

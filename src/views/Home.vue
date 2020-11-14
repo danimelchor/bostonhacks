@@ -1,10 +1,8 @@
 <template>
-  <div class="home">
-  </div>
+  <div class="home"></div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
 
 <script>
 export default {

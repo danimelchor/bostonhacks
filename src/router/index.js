@@ -8,8 +8,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () =>
-      import("../views/Home.vue")
+    component: () => import("../views/Home.vue")
   },
   {
     path: "/calculator",
@@ -19,14 +18,12 @@ const routes = [
   {
     path: "/contact",
     name: "Contact",
-    component: () =>
-      import("../views/Contact.vue")
+    component: () => import("../views/Contact.vue")
   },
   {
     path: "/alternatives",
     name: "Alternatives",
-    component: () =>
-      import("../views/Alternatives.vue")
+    component: () => import("../views/Alternatives.vue")
   }
 ];
 
