@@ -1,44 +1,18 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <p>FoodPrint</p>
-      <router-link to="/">Home</router-link>
-      <router-link to="/calculator">Calculator</router-link>
-      <router-link to="/contact">Contact</router-link>
-      <router-link to="/alternatives">View alternatives</router-link>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">FoodPrint</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/calculator">Calculator</a>
+        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/alternatives">View alternatives</a>
+      </div>
     </div>
-    <router-view />
-  </div>
+  </nav>
 </template>
 <style lang="scss" scoped>
 @import "./assets/css/reset.css";
-
-$bg: #222;
-
-#app {
-  p {
-    margin-right: 5vw;
-    font-size: 2em;
-    color: white;
-    vertical-align: middle;
-    padding: 0.8vw;
-    display: inline-block;
-  }
-
-  #nav {
-    background-color: $bg;
-    text-align: center;
-
-    a {
-      color: white;
-      display: inline-block;
-      text-decoration: none;
-      padding: 1vw;
-    }
-
-    a:hover {
-      color: #333;
-    }
-  }
-}
 </style>
