@@ -27,5 +27,9 @@ $bg : #222;
     text-decoration: none;
     padding: 1vw;
   }
+
+  a:hover {
+    color: #333;
+  }
 }
 </style>
