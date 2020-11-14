@@ -12,18 +12,18 @@ const routes = [
       import("../views/Home.vue")
   },
   {
-    path: "calculator/",
+    path: "/calculator",
     name: "Calculator",
     component: Calculator
   },
   {
-    path: "contact/",
+    path: "/contact",
     name: "Contact",
     component: () =>
       import("../views/Contact.vue")
   },
   {
-    path: "alternatives/",
+    path: "/alternatives",
     name: "Alternatives",
     component: () =>
       import("../views/Alternatives.vue")

@@ -12,17 +12,20 @@
 <style lang="scss">
 @import './assets/css/reset.css';
 
-$bg : #555;
+$bg : #222;
 
 #app {
 }
 
 #nav {
   background-color: $bg;
+  text-align: center;
 
   a {
     color: white;
+    display: inline-block;
     text-decoration: none;
+    padding: 1vw;
   }
 }
 </style>
