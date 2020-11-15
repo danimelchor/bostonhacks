@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+  	<p style="color: #222;margin-bottom:30px;font-size: 1.1em;display: block;background: #88e3c5;; padding: 20px;">Article retrieved from Hannah Ritchie (2020) – “You want to reduce the carbon footprint of your food? Focus on what you eat, not whether your food is local”. Published online at OurWorldInData.org. Retrieved from: ‘<a href="https://ourworldindata.org/food-choice-vs-eating-local" target="_blank">https://ourworldindata.org/food-choice-vs-eating-local</a>’ [Online Resource]</p>
     <h1>Alternatives</h1>
     <p>People across the world are becoming increasingly concerned about climate change: 8-in-10 people see climate change as a major threat to their country.1</p>
 
@@ -13,7 +14,9 @@
 
 <p>GHG emissions from transportation make up a very small amount of the emissions from food and what you eat is far more important than where your food traveled from.</p>
 
-<p>Where do the emissions from our food come from? In the visualization we see GHG emissions from 29 different food products &ndash; from beef at the top to nuts at the bottom.</p>
+<h2>Where do the emissions from our food come from?</h2>
+
+<p> In the visualization we see GHG emissions from 29 different food products &ndash; from beef at the top to nuts at the bottom.</p>
 
 <p>For each product you can see from which stage in the supply chain its emissions originate. This extends from land use changes on the left, through to transport and packaging on the right.</p>
 
@@ -35,7 +38,9 @@
 
 <p>This data shows that this is the case when we look at individual food products. But studies also shows that this holds true for actual diets; here we show the results of a study which looked at the footprint of diets across the EU. Food transport was responsible for only 6% of emissions, whilst dairy, meat and eggs accounted for 83%.4</p>
 
-<p>Eating local only slightly reduces your emissions Eating local beef or lamb has many times the carbon footprint of most other foods. Whether they are grown locally or shipped from the other side of the world matters very little for total emissions.</p>
+<h2>Eating local only slightly reduces your emissions</h2>
+
+<p>Eating local beef or lamb has many times the carbon footprint of most other foods. Whether they are grown locally or shipped from the other side of the world matters very little for total emissions.</p>
 
 <p>Transport typically accounts for less than 1% of beef&rsquo;s GHG emissions: choosing to eat local has very minimal effects on its total footprint. You might think this figure is strongly dependent on where in the world you live, and how far your beef will have to travel, but in the &lsquo;dropdown box&rsquo; below I work through an example to show why it doesn&rsquo;t make a lot of difference.</p>
 
@@ -51,7 +56,9 @@
 
 <p>Hospido et al. (2009) estimate that importing Spanish lettuce to the UK during winter months results in three to eight times lower emissions than producing it locally.7 The same applies for other foods: tomatoes produced in greenhouses in Sweden used 10 times as much energy as importing tomatoes from Southern Europe where they were in-season.8</p>
 
-<p>Avoid the small share of foods that are air-freighted The impact of transport is small for most products, but there is one exception: those which travel by air.</p>
+<h2>Avoid the small share of foods that are air-freighted</h2>
+
+<p>The impact of transport is small for most products, but there is one exception: those which travel by air.</p>
 
 <p>Many believe that air-freight is more common than it actually is. Very little food is air-freighted; it accounts for only 0.16% of food miles.9 But for the few products which are transported by air, the emissions can be very high: it emits 50 times more CO2eq than boat per tonne kilometer.10</p>
 
@@ -74,26 +81,29 @@ $main-green : #88e3c5;
 
 .container {
 	margin-top: 2vw;
+	padding: 0 10vw;
+	padding-bottom: 30vh;
 	width: 60vw;
 
 	h1 {
 		font-size: 2.8em;
 		font-weight: bold;
 		color: #444;
-		margin-bottom: 2vw;
+		margin-bottom: 1vw;
 	}
 
 	h2 {
 		font-size: 2em;
 		font-weight: bold;
 		color: #777;
-		margin-bottom: 1.8vw;
+		margin-bottom: 1.4vw;
+		margin-top: 2vw;
 	}
 
 	p {
-		margin: 8px 0;
-		line-height: 1.3em;
-		font-size: 1em;
+		margin: 15px 0;
+		line-height: 1.4em;
+		font-size: 0.9em;
 	}
 
 }
@@ -103,6 +113,21 @@ $main-green : #88e3c5;
   	width: 100vw;
   	max-width: 100vw;
   	margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+  	width: 100vw;
+  	padding: 2vw 7vw;
+  	max-width: 100vw;
+  	margin: 0;
+  	margin-top: 14vw;
+
+  	h2 {
+  		margin-top: 10vw;
+  		font-size: 1.3em;
+  	}
   }
 }
 </style>

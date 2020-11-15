@@ -4,7 +4,7 @@
   		<div class="col">
   			<h1>Calculator</h1>
 	    	<p>Type your most recent meal and look at your carbon footprint based on that meal</p>
-	    	<p>For more information on how to reduce it, <a href="/alternatives">click here</a></p>
+	    	<p>For more information on how to reduce it, <router-link to="/alternatives">click here</router-link></p>
   		</div>
   		<div class="col" id="formDiv">
   			<div class="input-group mb-3">
@@ -101,6 +101,26 @@ $main-green : #88e3c5;
   	padding: 0;
   	margin-top: 4vw;
   }
+}
+
+@media (max-width: 600px) {
+	.container {
+		margin-top: 14vw;
+		padding-top: 10vw;
+
+		.row {
+			margin-bottom: 10vw;
+		}
+
+		.col .input-group {
+			width: 90vw;
+		}
+	}
+
+	.map {
+		height: 100%;
+	  	width: 100vw;
+	}
 }
 </style>
 

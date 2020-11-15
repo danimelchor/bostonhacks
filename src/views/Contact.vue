@@ -147,6 +147,35 @@ $main-green : #88e3c5;
   	}
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+  	border: 0 none;
+  	margin-top: 14vw;
+
+  	.contact-info {
+  		h1 {
+	  		font-size: 2.2em;
+	  	}
+  	}
+
+  	.col-sm {
+  		display: block;
+		padding: 7vw;
+  	}
+
+  	.arrow-left {
+		width: 0; 
+	  	height: 0; 
+	  	border-left: 40px solid transparent;
+	  	border-right: 40px solid transparent;
+	  	margin-left: 30px;
+	  	margin-top: -40px;
+	  
+		border-bottom:40px solid $main-green; 
+	}
+  }
+}
 </style>
 
 <script>

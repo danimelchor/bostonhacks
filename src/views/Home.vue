@@ -25,7 +25,7 @@ $main-green : #88e3c5;
 	}
 
 	.info-home-container {
-		background: rgba(0,0,0,0.4);
+		background: rgba(0,0,0,0.7);
 		width: 60vw;
 		height: 100%;
 		position: absolute;
@@ -88,6 +88,39 @@ $main-green : #88e3c5;
 		}
   	}
   }
+}
+
+@media (max-width: 600px) {
+	.container {
+		margin-top: 14vw;
+		height: 32vh;
+
+		img {
+			height: 32vh;
+		}
+
+		.info-home-container {
+			position: absolute;
+
+			.info-home {
+				left: 5%;
+				width: 90vw;
+
+				h1 {
+					font-size: 2.2em;
+				}
+
+				p {
+					font-size: 1.3em;
+				}
+
+				a {
+					width: 100%;
+					padding: 4vw 0;
+				}
+			}
+		}
+	}
 }
 </style>
 

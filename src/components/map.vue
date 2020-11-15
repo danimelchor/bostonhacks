@@ -79,4 +79,12 @@ export default {
       border-radius: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .fill-wrapper {
+      width: 100vw;
+      height: 100%;
+      border-radius: 0;
+  }
+}
 </style>
