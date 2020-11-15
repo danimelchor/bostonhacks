@@ -6,12 +6,12 @@
 	    	<p>Type your most recent meal and look at your carbon footprint based on that meal</p>
 	    	<p>For more information on how to reduce it, <a href="/alternatives">click here</a></p>
   		</div>
-  		<div class="col">
+  		<div class="col" id="formDiv">
   			<div class="input-group mb-3">
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-drumstick-bite"></i></span>
 			  </div>
-			  <input type="text" class="form-control" placeholder="Type a food..." aria-label="Food" aria-describedby="basic-addon1">
+			  <input v-model="foodSearch" type="text" class="form-control" placeholder="Type a food..." aria-label="Food" aria-describedby="basic-addon1">
 			  <div class="input-group-append">
 			    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
 			  </div>
@@ -77,6 +77,31 @@ $main-green : #88e3c5;
 	border-radius: 5px;
 	margin: 5vh auto;
 }
+
+@media (max-width: 1200px) {
+  .row {
+  	padding: 1.5vw 5vw;
+  }
+
+  .container {
+  	width: 100vw;
+  	max-width: 100vw;
+  	padding: 0;
+
+  	.col .input-group {
+  		width: 30vw;
+  	}
+  }
+
+  .map {
+  	height: 100%;
+  	border-radius: 0;
+  	width: 100vw;
+  	margin: 0;
+  	padding: 0;
+  	margin-top: 4vw;
+  }
+}
 </style>
 
 <script>
@@ -86,6 +111,11 @@ export default {
   name: "Calculator",
   components: {
     Map
+  },
+  data() {
+  	return {
+  		foodSearch: ''
+  	}
   }
 };
 </script>

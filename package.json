@@ -13,6 +13,7 @@
     "@hirelofty/vue_deckgl": "^0.9.0",
     "bootstrap-vue": "^2.19.0",
     "core-js": "^3.6.5",
+    "emailjs-com": "^2.6.4",
     "mapbox-gl": "^1.12.0",
     "vue": "^2.6.12",
     "vue-router": "^3.2.0",

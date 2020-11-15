@@ -53,7 +53,7 @@ export default {
             opacity: 0.8,
             getPosition: d => [d[0], d[1]],
             getWeight: d => d[2],
-            cellSizePixels: 20,
+            cellSizePixels: 5,
             colorRange,
             gpuAggregation: true,
             aggregation: 'SUM'
@@ -62,12 +62,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .fill-wrapper {
     position: absolute;
     width: 58vw;
     height: 30vw;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .fill-wrapper {
+      width: 100vw;
+      height: 50vw;
+      border-radius: 0;
+  }
 }
 </style>

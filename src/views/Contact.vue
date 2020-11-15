@@ -13,7 +13,7 @@
 	    		<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 				  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
 				</svg>
-	    		<div class="contact-info-text"><p>contact@bostonhacks.com</p></div>
+	    		<div class="contact-info-text"><p>test@gmail.com</p></div>
 	    	</div>
 	    	<div class="contact-info-item">
 	    		<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@
 	    </div>
 	    <div class="arrow-left"></div>
 	    <div class="col-sm contact-form">
-	    	<form>
+	    	<form @submit.prevent="sendEmail">
 		    	<div class="input-group mb-3">
 				  <div class="input-group-prepend">
 				    <span class="input-group-text" id="basic-addon1">
@@ -34,7 +34,7 @@
 						</svg>
 					</span>
 				  </div>
-				  <input type="text" class="form-control" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1">
+				  <input v-model="name" type="text" class="form-control" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1">
 				</div>
 		      	<div class="input-group mb-3">
 				  <div class="input-group-prepend">
@@ -44,7 +44,7 @@
 						</svg>
 					</span>
 				  </div>
-				  <input type="text" class="form-control" placeholder="Email address" aria-label="Email address" aria-describedby="basic-addon1">
+				  <input v-model="email" type="text" class="form-control" placeholder="Email address" aria-label="Email address" aria-describedby="basic-addon1">
 				</div>
 		      	<div class="input-group">
 				  <div class="input-group-prepend">
@@ -54,9 +54,9 @@
 						</svg>
 				    </span>
 				  </div>
-				  <textarea class="form-control" aria-label="With textarea"></textarea>
+				  <textarea v-model="message" class="form-control" aria-label="With textarea" placeholder="Message"></textarea>
 				</div>
-		      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+		      <input type="submit" class="btn btn-primary btn-lg" value="Submit">
 		    </form>
 	    </div>
 	  </div>
@@ -67,7 +67,7 @@
 $main-green : #88e3c5;
 
 .container {
-	border-radius: 15px;
+	border-radius: 5px;
 	border: 1px solid #111;
 	margin-top: 2vw;
 	width: 60vw;
@@ -104,9 +104,15 @@ $main-green : #88e3c5;
 	.contact-form {
 		padding: 2vw;
 		background-color: $main-green;
-		border-radius: 0 15px 15px 0;
+		border-radius: 0 5px 5px 0;
 
-		button {
+		input:focus, textarea:focus {
+			box-shadow: none;
+			font-weight: bold;
+			border-color: #444;
+		}
+
+		input[type="submit"] {
 			margin-top: 20px;
 		}
 
@@ -125,10 +131,56 @@ $main-green : #88e3c5;
   
 	border-right:40px solid $main-green; 
 }
+
+@media (max-width: 1200px) {
+  .container {
+  	width: 100vw;
+  	max-width: 100vw;
+  	border: 0 none;
+  	border-top: 1px solid #111;
+  	border-bottom: 1px solid #111;
+  	border-radius: 0;
+  	margin: 0;
+
+  	.contact-form {
+  		border-radius: 0;
+  	}
+  }
+}
 </style>
 
 <script>
+import emailjs from 'emailjs-com';
+
 export default {
-  name: "Contact"
+  name: "Contact",
+  data() {
+  	return {
+  		name: '',
+  		email: '',
+  		message: ''
+  	}
+  },
+  methods: {
+    sendEmail(e) {
+      console.log('Sent');
+
+      try {
+        emailjs.sendForm('service_qvqtmgy', 'template_t1gw5po', e.target,
+        'user_IZVUqnSg9iT7KANzDWV86', {
+          name: this.name,
+          email: this.email,
+          message: this.message
+        })
+
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    },
+  }
 };
 </script>

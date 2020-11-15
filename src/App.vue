@@ -2,11 +2,11 @@
 <div id="app">
   <div class="nav-bar">
     <div class="navcontent">
-      <a class="navbrand" href="/bostonhacks/">FoodPrint</a>
+      <router-link class="navbrand" to="/">FoodPrint</router-link>
       <div class="navlinks">
           <router-link to="/calculator" class="nav-link">Calculator</router-link>
           <router-link to="/contact" class="nav-link">Contact</router-link>
-          <router-link to="/alternatives" class="nav-link">View alternatives</router-link>
+          <router-link to="/alternatives" class="nav-link">View alternatives </router-link>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@
     .navbrand {
       font-size: 1.5em;
       margin-right: 4vw;
+      vertical-align: middle;
     }
 
     a {
@@ -42,3 +43,9 @@
   }
 }
 </style>
+
+<script>
+export default {
+  name: "App"
+};
+</script>

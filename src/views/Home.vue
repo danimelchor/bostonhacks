@@ -3,8 +3,8 @@
   	<div class="info-home-container">
   		<div class="info-home">
 	  		<h1>FoodPrint</h1>
-	  		<p>Calculating your individual carbon footprint in a click</p>
-	  		<a href="/calculator">Calculate mine!</a>
+	  		<p>Calculate your individual carbon footprint in a click</p>
+	  		<router-link to="/calculator">Calculate mine!</router-link >
   		</div>
   	</div>
   	<img src="@/assets/img/slide1.png">
@@ -67,6 +67,27 @@ $main-green : #88e3c5;
 			}
 		}
 	}
+}
+
+@media (max-width: 1200px) {
+  .container {
+  	width: 100vw;
+  	max-width: 100vw;
+
+  	img {
+  		width: 100vw;
+  	}
+
+  	.info-home-container {
+  		width: 100vw;
+
+  		.info-home {
+		  	a {
+		  		width: 20vw;
+		  	}
+		}
+  	}
+  }
 }
 </style>
 
