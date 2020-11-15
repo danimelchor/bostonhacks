@@ -49,7 +49,7 @@ export default {
   mounted(){
         this.layers.push(new ScreenGridLayer({
             id: 'mylayer',
-            data: '/test-dataset.json',
+            data: 'https://raw.githubusercontent.com/danimelchor/bostonhacks/main/test-dataset.json',
             opacity: 0.8,
             getPosition: d => [d[0], d[1]],
             getWeight: d => d[2],
