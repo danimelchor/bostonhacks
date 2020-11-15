@@ -2,7 +2,7 @@
  <div class="container">
   	<div class="row">
   		<div class="col">
-  			<h1>Calculator</h1>
+  			<h1>Calculator - Testing (Currently displaying McDonalds in the US)</h1>
 	    	<p>Type your most recent meal and look at your carbon footprint based on that meal</p>
 	    	<p>For more information on how to reduce it, <router-link to="/alternatives">click here</router-link></p>
   		</div>
@@ -106,7 +106,7 @@ $main-green : #88e3c5;
 @media (max-width: 600px) {
 	.container {
 		margin-top: 14vw;
-		padding-top: 10vw;
+		padding-top: 10vw; 
 
 		.row {
 			margin-bottom: 10vw;

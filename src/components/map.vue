@@ -8,12 +8,12 @@
             :height="'100%'"
             :controller="true"
             :useDevicePixels="false"
-            :viewState="{latitude: 40.73, longitude: -73.75, zoom: 9.6, maxZoom: 16, pitch: 0, bearing: 0}"
+            :viewState="{latitude: 0, longitude: 0, zoom: 1, maxZoom: 16, pitch: 0, bearing: 0}"
             >
       <Mapbox class="fill-wrapper" 
                 :accessToken="'pk.eyJ1IjoiZG1lbGNob3IiLCJhIjoiY2toaWJsNnhyMGEzbTJ6c2RmZWRzY3EyMiJ9.55wKLQ9Yze26jToMLOMQ2g'"                 
-                :center="[0,30]"
-                :zoom="9.6"
+                :center="[0,0]"
+                :zoom="1"
                 :bearing="0"
                 :pitch="0"/>
     </DeckGL>
@@ -26,9 +26,9 @@ import {ScreenGridLayer} from '@deck.gl/aggregation-layers';
 import {isWebGL2} from '@luma.gl/core';
 
 
-const colorRange = [
+const colorRange = [/*
   [255, 255, 178, 25],
-  [254, 217, 118, 85],
+  [254, 217, 118, 85],*/
   [254, 178, 76, 127],
   [253, 141, 60, 170],
   [240, 59, 32, 212],
@@ -51,9 +51,9 @@ export default {
             id: 'mylayer',
             data: 'https://raw.githubusercontent.com/danimelchor/bostonhacks/main/test-dataset.json',
             opacity: 0.8,
-            getPosition: d => [d[0], d[1]],
+            getPosition: d => [d[1], d[0]],
             getWeight: d => d[2],
-            cellSizePixels: 5,
+            cellSizePixels: 7,
             colorRange,
             gpuAggregation: true,
             aggregation: 'SUM'
