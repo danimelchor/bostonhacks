@@ -27,8 +27,8 @@ import {isWebGL2} from '@luma.gl/core';
 
 
 const colorRange = [/*
-  [255, 255, 178, 25],
-  [254, 217, 118, 85],*/
+  [255, 255, 178, 25],*/
+  [254, 217, 118, 85],
   [254, 178, 76, 127],
   [253, 141, 60, 170],
   [240, 59, 32, 212],
@@ -49,11 +49,11 @@ export default {
   mounted(){
         this.layers.push(new ScreenGridLayer({
             id: 'mylayer',
-            data: 'https://raw.githubusercontent.com/danimelchor/bostonhacks/main/vegan-dataset.json',
+            data: 'https://raw.githubusercontent.com/danimelchor/bostonhacks/main/fastfood-dataset.json',
             opacity: 0.8,
             getPosition: d => [d[1], d[0]],
             getWeight: d => d[2],
-            cellSizePixels: 5,
+            cellSizePixels: 10,
             colorRange,
             gpuAggregation: true,
             aggregation: 'SUM'
