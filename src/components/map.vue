@@ -8,12 +8,12 @@
             :height="'100%'"
             :controller="true"
             :useDevicePixels="false"
-            :viewState="{latitude: 0, longitude: 0, zoom: 1, maxZoom: 16, pitch: 0, bearing: 0}"
+            :viewState="{latitude: 40, longitude: -100, zoom: 2.5, maxZoom: 10, pitch: 0, bearing: 0}"
             >
       <Mapbox class="fill-wrapper" 
                 :accessToken="'pk.eyJ1IjoiZG1lbGNob3IiLCJhIjoiY2toaWJsNnhyMGEzbTJ6c2RmZWRzY3EyMiJ9.55wKLQ9Yze26jToMLOMQ2g'"                 
-                :center="[0,0]"
-                :zoom="1"
+                :center="[-100,40]"
+                :zoom="2.5"
                 :bearing="0"
                 :pitch="0"/>
     </DeckGL>
@@ -53,7 +53,7 @@ export default {
             opacity: 0.8,
             getPosition: d => [d[1], d[0]],
             getWeight: d => d[2],
-            cellSizePixels: 7,
+            cellSizePixels: 5,
             colorRange,
             gpuAggregation: true,
             aggregation: 'SUM'
