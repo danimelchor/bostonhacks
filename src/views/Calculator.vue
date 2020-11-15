@@ -11,7 +11,7 @@
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-drumstick-bite"></i></span>
 			  </div>
-			  <input v-model="foodSearch" type="text" class="form-control" placeholder="Type a food..." aria-label="Food" aria-describedby="basic-addon1">
+			  <input v-model="foodSearch" type="text" class="form-control" placeholder="Type a food... (Current: burger)" aria-label="Food" aria-describedby="basic-addon1">
 			  <div class="input-group-append">
 			    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
 			  </div>
