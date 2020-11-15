@@ -49,7 +49,7 @@ export default {
   mounted(){
         this.layers.push(new ScreenGridLayer({
             id: 'mylayer',
-            data: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/screen-grid/uber-pickup-locations.json',
+            data: '/test-dataset.json',
             opacity: 0.8,
             getPosition: d => [d[0], d[1]],
             getWeight: d => d[2],
